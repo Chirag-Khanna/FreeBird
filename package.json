@@ -7,7 +7,7 @@
     "ng": "ng",
     "build-server": "babel ./server --out-dir ./dist/server  --ignore ./server/libs/skills/ --copy-files && babel ./server/libs/skills/ --out-dir ./dist/server/libs/skills/ --presets es2015-without-strict --copy-files",
     "build": "webpack",
-    "start": "npm run build && node server/server",
+    "start": "node server/server",
     "start:prod": "npm run build && node server/server",
     "test": "karma start ./karma.conf.js",
     "e2e": "protractor ./protractor.conf.js"
