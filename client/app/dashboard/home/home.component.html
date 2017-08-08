@@ -1,0 +1,172 @@
+<div class="main-content">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 ">
+                <div id="carousel-example-generic" class="carousel slide carouselHeight" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="../../../assets/img/cyclecafe.jpg" width="100%" height="100%" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Cafe Environment</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../../../assets/img/cyclecafe2.jpg" width="100%" height="100%" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Cozy an Comfortable Backyard</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../../../assets/img/amphitheater.jpg" width="100%" height="100%" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Amphitheater for Live Events</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../../../assets/img/caferes.jpg" width="100%" height="100%" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Family Restaurant Space</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../../../assets/img/cycleEvent.png" width="100%" height="100%" alt="...">
+                            <div class="carousel-caption">
+                                <h3>Cycling events organized</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    </a>
+                </div>
+                <!-- Carousel -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-8">
+                <div class="card">
+                    <div class="card-header" data-background-color="orange">
+                        <h3 class="title">Today's Special</h3>
+                    </div>
+                    <div class="card-content">
+                        <table class="table">
+                            <tbody>
+                                <tr *ngFor="let item of items">
+                                    <td>
+                                        <label>{{item.head}}:</label>
+                                    </td>
+                                    <td>
+                                        <p>{{item.subject}}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-16">
+                <div class="card">
+                    <div class="card-header" data-background-color="orange">
+                        <h3 class="title">Our Services</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li *ngFor="let serv of cafeServices">{{serv}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-24">
+                <div class="card">
+                    <div class="card-header" data-background-color="orange">
+                        <h3 class="title">Customer Reviews</h3>
+                    </div>
+                    <div class="card-content reviews">
+                        <blockquote *ngFor="let review of customReviews">
+                            <p>{{review.review}}
+                            </p>
+                            <small>
+                                 {{review.reviewer}}
+                                 </small>
+                                <small class="text-right">
+                                {{ review.date}}
+                                 </small>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header card-chart" data-background-color="green">
+                        <div class="ct-chart" id="dailySalesChart"></div>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="title">Daily Sales</h4>
+                        <p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in today sales.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">access_time</i> updated 4 minutes ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header card-chart" data-background-color="orange">
+                        <div class="ct-chart" id="emailsSubscriptionChart"></div>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="title">Email Subscriptions</h4>
+                        <p class="category">Last Campaign Performance</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">access_time</i> campaign sent 2 days ago
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header card-chart" data-background-color="red">
+                        <div class="ct-chart" id="completedTasksChart"></div>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="title">Completed Tasks</h4>
+                        <p class="category">Last Campaign Performance</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">access_time</i> campaign sent 2 days ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>

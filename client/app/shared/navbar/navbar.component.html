@@ -1,0 +1,46 @@
+<nav class="navbar navbar-transparent">
+    <div class="container-fluid">
+        <div class="navbar-header" [routerLink]="['/Home']" role="link">
+            <div class="logo">
+                <img src="../assets/img/Freebird-Logo.png" alt="{{getTitle()}}">
+            </div>            
+            <a class="navbar-brand">{{getTitle()}}</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav nav-pills nav-pills-icons nav-pills-primary">
+                <li routerLinkActive="active" role="link">
+                    <a [routerLink]="['/AboutOurCafe']">
+			            <i class="material-icons">directions_bike</i>
+                        About Our Cafe
+                    </a>
+                </li>
+                <li routerLinkActive="active" role="link">
+                    <a [routerLink]="['/OurGallery']">
+                        <i class="material-icons">camera_enhance</i>  
+                        Our Gallery
+                    </a>
+                </li>
+
+                <li routerLinkActive="active" role="link">
+                    <a [routerLink]="['/OurMenu']">
+                        <i class="material-icons">local_dining</i>
+                        Our Menu
+                    </a>
+                </li>
+                <li routerLinkActive="active" role="link">
+                    <a [routerLink]="['/BookaTable']">
+                        <i class="material-icons">schedule</i>
+                        Book a Table
+                    </a>
+                </li>
+                <li routerLinkActive="active" role="link">
+                    <a [routerLink]="['/ContactUs']">
+                        <i class="material-icons">face</i>
+                        Contact US
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- role="tab" data-toggle="tab" -->

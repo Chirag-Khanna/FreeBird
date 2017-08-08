@@ -1,0 +1,40 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-plain">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Glimpse of our Cafe</h4>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr *ngFor="let rowImg of CafImgs">
+                                    <td *ngFor="let colImgPath of rowImg"><img class="img-rounded" src={{colImgPath}}/></td>
+                                </tr>                                                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-plain">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Products Offered</h4>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr *ngFor="let rowImg of prodImgs">
+                                    <td *ngFor="let colImgPath of rowImg"><img class="img-rounded" src={{colImgPath}} style="width:200px; height:200px"/></td>
+                                </tr>                                                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
