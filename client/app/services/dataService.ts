@@ -15,18 +15,22 @@ export class DataService {
         this.webDataConfig = null;
     }
 
-    getWebData(): Observable<any> {
-        //    let params = new URLSearchParams();
-        //     params.set('TaskId', taskId);
-        if (this.webDataConfig) {
-            return Observable.of(this.webDataConfig);
-        }
-        else {
-            return this.http.get("/api/fetchWebData")
-            .map(this.extractData.bind(this))
-            .catch(this.handleError);
-        }
-    }
+    // getWebData(): Observable<any> {
+    //     //    let params = new URLSearchParams();
+    //     //     params.set('TaskId', taskId);
+    //     if (this.webDataConfig) {
+    //         return Observable.of(this.webDataConfig);
+    //     }
+    //     else {
+    //         return this.http.get("/api/fetchWebData")
+    //         .map(this.extractData.bind(this))
+    //         .catch(this.handleError);
+    //     }
+    // }
+
+    getWebData() {
+        return Observable.of({})
+    };
     private extractData(res: Response) {
         let body = res.json();
         if (body.Error) {

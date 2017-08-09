@@ -1047,18 +1047,22 @@ var DataService = (function () {
         this.http = http;
         this.webDataConfig = null;
     }
+    // getWebData(): Observable<any> {
+    //     //    let params = new URLSearchParams();
+    //     //     params.set('TaskId', taskId);
+    //     if (this.webDataConfig) {
+    //         return Observable.of(this.webDataConfig);
+    //     }
+    //     else {
+    //         return this.http.get("/api/fetchWebData")
+    //         .map(this.extractData.bind(this))
+    //         .catch(this.handleError);
+    //     }
+    // }
     DataService.prototype.getWebData = function () {
-        //    let params = new URLSearchParams();
-        //     params.set('TaskId', taskId);
-        if (this.webDataConfig) {
-            return Observable_1.Observable.of(this.webDataConfig);
-        }
-        else {
-            return this.http.get("/api/fetchWebData")
-                .map(this.extractData.bind(this))
-                .catch(this.handleError);
-        }
+        return Observable_1.Observable.of({});
     };
+    ;
     DataService.prototype.extractData = function (res) {
         var body = res.json();
         if (body.Error) {
