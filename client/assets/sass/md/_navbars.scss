@@ -18,7 +18,7 @@
     color: inherit;
     padding: 10px 15px;
     top: -10px;
-    left: -23px;
+    left: -10px;
     font-size: 20px;
     font-weight: 700;
     &:hover,
@@ -214,7 +214,10 @@
   &.navbar-default{
       .logo-container .brand{
           color: $gray;
-      }
+      }      
+  }
+  .logo{
+        margin-left: 10px;
   }
 
   .navbar-link {

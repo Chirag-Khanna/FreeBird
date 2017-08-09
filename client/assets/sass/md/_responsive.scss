@@ -473,7 +473,7 @@
         > ul{
             position: relative;
             z-index: 4;
-            overflow-y: scroll;
+            overflow-y: auto;
             height: calc(100vh - 61px);
             width: 100%;
         }

@@ -2494,7 +2494,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     color: inherit;
     padding: 10px 15px;
     top: -10px;
-    left: -23px;
+    left: -10px;
     font-size: 20px;
     font-weight: 700; }
     .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
@@ -2602,6 +2602,8 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
       background-color: transparent; } }
   .navbar.navbar-default .logo-container .brand {
     color: #908f8f; }
+  .navbar .logo {
+    margin-left: 10px; }
   .navbar .navbar-link {
     color: inherit; }
     .navbar .navbar-link:hover {
@@ -4471,7 +4473,7 @@ footer {
     .bootstrap-navbar > ul {
       position: relative;
       z-index: 4;
-      overflow-y: scroll;
+      overflow-y: auto;
       height: calc(100vh - 61px);
       width: 100%; }
     .bootstrap-navbar a {
