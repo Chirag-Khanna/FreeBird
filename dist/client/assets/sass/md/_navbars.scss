@@ -125,6 +125,10 @@
 
   // Darken the responsive nav toggle
   .navbar-toggle {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 1033;
     border: 0;
     &:hover,
     &:focus {
@@ -133,8 +137,12 @@
     .icon-bar {
       background-color: inherit;
       border: 1px solid;
-    }
+    }    
   }
+
+  .navbar-toggle.toggled{
+    right:220px;
+    }
 
   .navbar-default .navbar-toggle,
   .navbar-inverse .navbar-toggle {

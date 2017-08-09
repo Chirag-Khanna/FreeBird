@@ -5,7 +5,8 @@ const ProgressPlugin = require('webpack/lib/ProgressPlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const { NoEmitOnErrorsPlugin, LoaderOptionsPlugin } = require('webpack');
 const { BaseHrefWebpackPlugin, GlobCopyWebpackPlugin } = require('@angular/cli/plugins/webpack');
@@ -13,7 +14,7 @@ const { CommonsChunkPlugin } = require('webpack').optimize;
 const { AotPlugin } = require('@ngtools/webpack');
 
 const nodeModules = path.join(process.cwd(), 'node_modules');
-const entryPoints = ["inline","polyfills","sw-register","scripts","styles","vendor","main"];
+const entryPoints = ["inline", "polyfills", "sw-register", "scripts", "styles", "vendor", "main"];
 
 
 
@@ -45,7 +46,7 @@ module.exports = {
       "script-loader!./client\\libs\\papaparse.min.js"
     ],
     "styles": [
-      "./client\\styles.css"    ]
+      "./client\\styles.css"]
   },
   "output": {
     "path": path.join(process.cwd(), "dist\\client"),
@@ -131,13 +132,13 @@ module.exports = {
         ],
         "test": /\.css$/,
         "loaders": ExtractTextPlugin.extract({
-  "use": [
-    "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-    "postcss-loader"
-  ],
-  "fallback": "style-loader",
-  "publicPath": ""
-})
+          "use": [
+            "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
+            "postcss-loader"
+          ],
+          "fallback": "style-loader",
+          "publicPath": ""
+        })
       },
       {
         "include": [
@@ -145,15 +146,15 @@ module.exports = {
         ],
         "test": /\.scss$|\.sass$/,
         "loaders": ExtractTextPlugin.extract({
-  "use": [
-    "exports-loader?module.exports.toString()",
-          "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-          "postcss-loader",
-          "sass-loader"
-  ],
-  "fallback": "style-loader",
-  "publicPath": ""
-})
+          "use": [
+            "exports-loader?module.exports.toString()",
+            "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
+            "postcss-loader",
+            "sass-loader"
+          ],
+          "fallback": "style-loader",
+          "publicPath": ""
+        })
       },
       {
         "include": [
@@ -161,14 +162,14 @@ module.exports = {
         ],
         "test": /\.less$/,
         "loaders": ExtractTextPlugin.extract({
-  "use": [
-    "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-    "postcss-loader",
-    "less-loader"
-  ],
-  "fallback": "style-loader",
-  "publicPath": ""
-})
+          "use": [
+            "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
+            "postcss-loader",
+            "less-loader"
+          ],
+          "fallback": "style-loader",
+          "publicPath": ""
+        })
       },
       {
         "include": [
@@ -176,14 +177,14 @@ module.exports = {
         ],
         "test": /\.styl$/,
         "loaders": ExtractTextPlugin.extract({
-  "use": [
-    "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-    "postcss-loader",
-    "stylus-loader?{\"sourceMap\":false,\"paths\":[]}"
-  ],
-  "fallback": "style-loader",
-  "publicPath": ""
-})
+          "use": [
+            "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
+            "postcss-loader",
+            "stylus-loader?{\"sourceMap\":false,\"paths\":[]}"
+          ],
+          "fallback": "style-loader",
+          "publicPath": ""
+        })
       },
       {
         "test": /\.ts$/,
@@ -198,9 +199,9 @@ module.exports = {
     new CleanWebpackPlugin('dist'),
     new NoEmitOnErrorsPlugin(),
     new CopyWebpackPlugin([{
-        from: 'client/assets',
-        to: 'assets'
-      }]),
+      from: 'client/assets',
+      to: 'assets'
+    }]),
     new HtmlWebpackPlugin({
       "template": "./client\\index.html",
       "filename": "./index.html",
@@ -219,15 +220,15 @@ module.exports = {
         let leftIndex = entryPoints.indexOf(left.names[0]);
         let rightindex = entryPoints.indexOf(right.names[0]);
         if (leftIndex > rightindex) {
-            return 1;
+          return 1;
         }
         else if (leftIndex < rightindex) {
-            return -1;
+          return -1;
         }
         else {
-            return 0;
+          return 0;
         }
-    }
+      }
     }),
     new BaseHrefWebpackPlugin({}),
     new CommonsChunkPlugin({
@@ -290,7 +291,11 @@ module.exports = {
       $: 'jquery',
       jquery: 'jquery',
       'window.jQuery': 'jquery'
+    }),
+    new UglifyJSPlugin({
+      compress: true
     })
+
   ],
   "node": {
     "fs": "empty",

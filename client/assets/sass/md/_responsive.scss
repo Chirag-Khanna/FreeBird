@@ -498,6 +498,11 @@
                     border-radius: 4px;
                     display: block;
                 }
+                > a:focus{
+                    opacity: 1;
+                    background-color: transparent;
+                }
+
             }
         }
         position: fixed;
@@ -509,7 +514,7 @@
         left: auto;
         z-index: 1032;
         visibility: visible;
-        background-color: #999;
+        background-color: transparent;
         overflow-y: visible;
         border-top: none;
         text-align: left;

@@ -2088,6 +2088,13 @@ select.form-control {
 .table > tbody > tr {
   position: relative; }
 
+#pop {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  height: 40%; }
+
 .checkbox label {
   cursor: pointer;
   padding-left: 0;
@@ -2549,12 +2556,18 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
       height: 40px;
       width: 40px; }
   .navbar .navbar-toggle {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 1033;
     border: 0; }
     .navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus {
       background-color: transparent; }
     .navbar .navbar-toggle .icon-bar {
       background-color: inherit;
       border: 1px solid; }
+  .navbar .navbar-toggle.toggled {
+    right: 220px; }
   .navbar .navbar-default .navbar-toggle,
   .navbar .navbar-inverse .navbar-toggle {
     border-color: transparent; }
@@ -4440,7 +4453,7 @@ footer {
     left: auto;
     z-index: 1032;
     visibility: visible;
-    background-color: #999;
+    background-color: transparent;
     overflow-y: visible;
     border-top: none;
     text-align: left;
@@ -4476,7 +4489,10 @@ footer {
       margin: 5px 15px;
       opacity: .86;
       border-radius: 4px;
-      display: block; } }
+      display: block; }
+    .bootstrap-navbar .nav li > a:focus {
+      opacity: 1;
+      background-color: transparent; } }
 @media (min-width: 768px) {
   .navbar > .container-fluid .navbar-brand {
     margin-left: 0; } }
