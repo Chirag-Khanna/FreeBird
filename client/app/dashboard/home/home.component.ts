@@ -10,12 +10,12 @@ declare var $;
 
 export class HomeComponent implements OnInit {
     items = [{
-        head: "Juicebar",
-        subject: "Meet the new kiwi juice. Meet the new kiwi juice. Meet the new kiwi juice."
+        head: "Cycling Event",
+        subject: "Cycling event on 15th August."
     },
     {
-        head: "Cycle Warehouse",
-        subject: "Meet our monster Fat Cycle"
+        head: "MotorBiking Event",
+        subject: "MotorBiking Event on 15th August"
     }
     ];
     cafeServices = ["We are a bunch of bicycle lovers who would like to share our experience with other companions. We have a pretty decent collection of armours for people like us.",

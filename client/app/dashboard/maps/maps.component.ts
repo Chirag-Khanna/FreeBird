@@ -18,7 +18,10 @@ websiteDataConfig: any;
         },
         {
             head:"Contact No:",
-            subject:"9999999999"
+            subject:"9871900222"
+        },{
+            head:"Email Id:",
+            subject:"wisdomshacks@gmail.com"
         }
     ];
     showroom = [
@@ -28,7 +31,11 @@ websiteDataConfig: any;
         },
         {
             head:"Contact No:",
-            subject:"9999999999"
+            subject:"9999857122"
+        },
+        {
+            head:"Email Id:",
+            subject:"wisdomshacks@gmail.com"
         }
     ];
     constructor(private dataservice:DataService){}
@@ -38,7 +45,7 @@ websiteDataConfig: any;
                 .subscribe(result => {
                     this.websiteDataConfig = result;
                 });
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
+        var myLatlng = new google.maps.LatLng(28.425611, 77.146146);
         var mapOptions = {
           zoom: 13,
           center: myLatlng,
@@ -50,7 +57,7 @@ websiteDataConfig: any;
 
         var marker = new google.maps.Marker({
             position: myLatlng,
-            title:"Hello World!"
+            title:"Cafe FreeBird"
         });
 
         // To add the marker to the map, call setMap();
