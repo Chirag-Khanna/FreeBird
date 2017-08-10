@@ -8,18 +8,19 @@
                             <h2 class="title">Book a Table</h2>
                         </div>
                         <div class="card-content">
-                            <form>
+
+                            <form id="demo-form" method="post" class="parsleyjs" (ngSubmit)="bookTable()" data-parsley-validate="">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group form-black label-floating is-empty">
-                                            <label class="control-label">First Name</label>
-                                            <input type="text" class="form-control">
+                                            <label class="control-label">Guest Name</label>
+                                            <input type="text" class="form-control" name= "gname" [(ngModel)]="bookingDetail.name" required="required">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group form-black label-floating is-empty">
-                                            <label class="control-label">Last Name</label>
-                                            <input type="text" class="form-control">
+                                            <label class="control-label">Email Id</label>
+                                            <input type="text" class="form-control" name= "gemail" [(ngModel)]="bookingDetail.email" data-parsley-trigger="change" data-parsley-validation-threshold="1" required="required">
                                         </div>
                                     </div>
                                 </div>
@@ -28,13 +29,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group form-black label-floating is-empty">
                                             <label class="control-label">Number of Guest</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" name= "gnumber" [(ngModel)]="bookingDetail.guest" required="required">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group form-black label-floating is-empty">
                                             <label class="control-label">Mobile Number</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" name= "gmob" [(ngModel)]="bookingDetail.mob" required="required">
                                         </div>
                                     </div>
                                 </div>
@@ -43,11 +44,11 @@
                                     <div class="col-md-12">
                                         <label>Cafe Area</label>
                                         <div class="form-group form-black label-floating is-empty">
-                                            <select class="form-control">
-                                                <option>Terrace</option>
-                                                <option>Relaxing Area</option>
-                                                <option>FunkYard</option>
-                                                <option>Amphi-Theater</option>
+                                            <select class="form-control" name= "garea" [(ngModel)]="bookingDetail.area" required="">
+                                                <option value="Terrace">Terrace</option>
+                                                <option value="Relaxing Area">Relaxing Area</option>
+                                                <option value="FunkYard">FunkYard</option>
+                                                <option value="Amphi-Theater">Amphi-Theater</option>
                                             </select>
                                         </div>
                                     </div>
