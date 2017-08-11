@@ -582,8 +582,11 @@ h2.title {
     margin-bottom: 0; }
 
 .carousel-inner .item {
-  height: 450px;
-  widows: 1079px; }
+  height: 450px; }
+
+.carouselItem.active {
+  display: flex !important;
+  justify-content: center; }
 
 .carouselHeight {
   height: 450px; }

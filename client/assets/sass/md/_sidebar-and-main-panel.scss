@@ -291,8 +291,11 @@
 .carousel-inner{
     .item{
         height: 450px;
-        widows: 1079px;
     }
+}
+.carouselItem.active{
+    display: flex !important;
+    justify-content: center;
 }
 .carouselHeight{
     height:450px;
