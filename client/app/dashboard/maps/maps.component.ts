@@ -21,21 +21,17 @@ websiteDataConfig: any;
             subject:"9871900222"
         },{
             head:"Email Id:",
-            subject:"wisdomshacks@gmail.com"
+            subject:"cafefreebird@gmail.com"
         }
     ];
-    showroom = [
+    feedback = [
         {
-            head:"Address:",
-            subject:"Gurgoan-Faridabad Road"
+            head:"Email Id:",
+            subject:"wisdomshacks@gmail.com"
         },
         {
             head:"Contact No:",
             subject:"9999857122"
-        },
-        {
-            head:"Email Id:",
-            subject:"wisdomshacks@gmail.com"
         }
     ];
     constructor(private dataservice:DataService){}

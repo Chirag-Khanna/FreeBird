@@ -43,18 +43,16 @@ export class TypographyComponent implements OnInit {
             this.bookingService.book(this.bookingDetail)
             .subscribe(result => {
                 if (result.message == "done") {
-                    $.notify({
-                        icon: "notifications",
-                        message: "done"
-
-                    }, {
-                            type: "success",
-                            timer: 4000,
-                            placement: {
-                                from: "top",
-                                align: "center"
-                            }
-                        });
+                    document.getElementById("successmsg").style.display = "block";
+                    setTimeout(function(){
+                        document.getElementById("successmsg").style.display = "none";
+                    },10000);
+                }
+                else {
+                    document.getElementById("errormsg").style.display = "block";
+                    setTimeout(function(){
+                        document.getElementById("errormsg").style.display = "none";
+                    },10000);
                 }
             });
         }

@@ -15,17 +15,18 @@ module.exports = function () {
       port: 465,
       secure: true, // secure:true for port 465, secure:false for port 587
       auth: {
-        user: 'chirag94.ck@gmail.com',
-        pass: 'Chirag2016'
+        user: 'cafefreebird@gmail.com',
+        pass: 'chirag@123'
       }
     });
 
     // setup email data with unicode symbols
     let mailOptions = {
-      from: 'chirag94.ck@gmail.com', // sender address
-      to: 'chirag94.msit@gmail.com', // list of receivers
+      from: 'cafefreebird@gmail.com', // sender address
+      to: bookingDetail.email, // list of receivers
+      bcc: 'cafefreebird@gmail.com',
       subject: 'Booking Confirmed', // Subject line
-      text: 'Booking for'+bookingDetail.name+'has been confirmed for'+bookingDetail.guest+'at Free BirdCafe - '+bookingDetail.area+' .For any furter details contact Himanshu Verma - 9811096215 or mail us at chirag94.ck@gmial.com \nRegards\nTeam Cafe FreeBird', // plain text body
+      text: 'Booking for customer: '+bookingDetail.name+' for '+bookingDetail.guest+' guests at Free BirdCafe - '+bookingDetail.area+ ' has been confirmed . \nWe will contact you at: '+ bookingDetail.mob + 'in case of any query. \nFor any furter details contact Himanshu Verma - 9871900222 or mail us at cafefreebird@gmail.com \nRegards\nTeam Cafe FreeBird', // plain text body
       // html: '<b>Hello world ?</b>' // html body
     };
 

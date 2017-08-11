@@ -14,13 +14,14 @@
                                     <div class="col-md-6">
                                         <div class="form-group form-black label-floating is-empty">
                                             <label class="control-label">Guest Name</label>
-                                            <input type="text" class="form-control" name= "gname" [(ngModel)]="bookingDetail.name" required="required">
+                                            <input type="text" class="form-control" name="gname" [(ngModel)]="bookingDetail.name" required="required">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group form-black label-floating is-empty">
                                             <label class="control-label">Email Id</label>
-                                            <input type="text" class="form-control" name= "gemail" [(ngModel)]="bookingDetail.email" data-parsley-trigger="change" data-parsley-validation-threshold="1" required="required">
+                                            <input type="text" class="form-control" name="gemail" [(ngModel)]="bookingDetail.email" data-parsley-trigger="change" data-parsley-validation-threshold="1"
+                                                required="required">
                                         </div>
                                     </div>
                                 </div>
@@ -29,13 +30,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group form-black label-floating is-empty">
                                             <label class="control-label">Number of Guest</label>
-                                            <input type="text" class="form-control" name= "gnumber" [(ngModel)]="bookingDetail.guest" required="required">
+                                            <input type="text" class="form-control" name="gnumber" [(ngModel)]="bookingDetail.guest" required="required">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group form-black label-floating is-empty">
                                             <label class="control-label">Mobile Number</label>
-                                            <input type="text" class="form-control" name= "gmob" [(ngModel)]="bookingDetail.mob" required="required">
+                                            <input type="text" class="form-control" name="gmob" [(ngModel)]="bookingDetail.mob" required="required">
                                         </div>
                                     </div>
                                 </div>
@@ -44,13 +45,25 @@
                                     <div class="col-md-12">
                                         <label>Cafe Area</label>
                                         <div class="form-group form-black label-floating is-empty">
-                                            <select class="form-control" name= "garea" [(ngModel)]="bookingDetail.area" required="">
+                                            <select class="form-control" name="garea" [(ngModel)]="bookingDetail.area" required="">
                                                 <option value="Terrace">Terrace</option>
                                                 <option value="Relaxing Area">Relaxing Area</option>
                                                 <option value="FunkYard">FunkYard</option>
                                                 <option value="Amphi-Theater">Amphi-Theater</option>
                                             </select>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12" id="successmsg" style="display:none">
+                                        <span class="alert alert-success">
+                                            <strong>Success!</strong> Hurray!! Your Booking has been confirmed. A followup mail has been sent to above email Id.
+                                        </span>
+                                    </div>
+                                    <div class="col-md-12" id="errormsg" style="display:none">
+                                        <span class="alert alert-danger">
+                                            <strong>Error!</strong> sorry!! Your Booking cannot be processed please contact us to book a table.
+                                        </span>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-danger pull-right">Book the Table</button>

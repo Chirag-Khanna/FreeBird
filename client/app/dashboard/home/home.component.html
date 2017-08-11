@@ -2,7 +2,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-10 col-lg-offset-1 ">
+            <div class="col-lg-10 col-lg-offset-1">
                 <div id="carousel-example-generic" class="carousel slide carouselHeight" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -16,33 +16,32 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="../../../assets/img/cyclecafe.jpg" width="100%" height="100%" alt="...">
+                            <img src="../../../assets/img/cyclecafe.jpg" alt="...">
                             <div class="carousel-caption">
-                                <h3>Cafe Environment</h3>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../../../assets/img/cyclecafe2.jpg" width="100%" height="100%" alt="...">
+                            <img src="../../../assets/img/cyclecafe2.jpg" alt="...">
                             <div class="carousel-caption">
-                                <h3>Cozy an Comfortable Backyard</h3>
+                                
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../../../assets/img/amphitheater.jpg" width="100%" height="100%" alt="...">
+                            <img src="../../../assets/img/amphitheater.jpg" alt="...">
                             <div class="carousel-caption">
-                                <h3>Amphitheater for Live Events</h3>
+                                
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../../../assets/img/caferes.jpg" width="100%" height="100%" alt="...">
+                            <img src="../../../assets/img/caferes.jpg" alt="...">
                             <div class="carousel-caption">
-                                <h3>Family Restaurant Space</h3>
+                                
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../../../assets/img/cycleEvent.png" width="100%" height="100%" alt="...">
+                            <img src="../../../assets/img/cycleEvent.jpg" alt="...">
                             <div class="carousel-caption">
-                                <h3>Cycling events organized</h3>
+                                
                             </div>
                         </div>
                     </div>
@@ -59,7 +58,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-8">
                 <div class="card">
-                    <div class="card-header" data-background-color="orange">
+                    <div class="card-header" data-background-color="red">
                         <h3 class="title">Today's Special</h3>
                     </div>
                     <div class="card-content">
@@ -81,7 +80,7 @@
 
             <div class="col-lg-8 col-md-16">
                 <div class="card">
-                    <div class="card-header" data-background-color="orange">
+                    <div class="card-header" data-background-color="red">
                         <h3 class="title">Our Services</h3>
                     </div>
                     <div class="card-content">
@@ -95,19 +94,19 @@
         <div class="row">
             <div class="col-lg-12 col-md-24">
                 <div class="card">
-                    <div class="card-header" data-background-color="orange">
-                        <h3 class="title">Customer Reviews</h3>
+                    <div class="card-header" data-background-color="red">
+                        <h3 class="title">Latest Events</h3>
                     </div>
                     <div class="card-content reviews">
-                        <blockquote *ngFor="let review of customReviews">
-                            <p>{{review.review}}
-                            </p>
+                        <blockquote *ngFor="let event of events">
+                            <a [routerLink]="['/LatestNewsandEvents']">{{event.title}}
+                            </a>                           
                             <small>
-                                 {{review.reviewer}}
-                                 </small>
-                                <small class="text-right">
-                                {{ review.date}}
-                                 </small>
+                                {{ event.description}}
+                            </small>
+                            <small class="text-right">
+                                {{ event.date}}
+                            </small>
                         </blockquote>
                     </div>
                 </div>
