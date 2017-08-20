@@ -11,7 +11,7 @@ export class IconsComponent implements OnInit{
     counter = 0;
     divRef
     constructor(){
-        this.menuItems = ["../../../assets/img/menu1.png","../../../assets/img/menu2.png","../../../assets/img/menu3.png","../../../assets/img/menu4.png","../../../assets/img/menu6.png","../../../assets/img/menu5.png"]
+        this.menuItems = ["../../../assets/img/menu1.png","../../../assets/img/menu2.png","../../../assets/img/menu3.png","../../../assets/img/menu4.png","../../../assets/img/menu5.png","../../../assets/img/menu6.png"]
     }
     ngOnInit(){
         this.changeBackgroundImages(this.counter);
