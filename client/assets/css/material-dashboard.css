@@ -589,7 +589,7 @@ h2.title {
   justify-content: center; }
 
 .menubtn {
-  position: relative;
+  position: absolute;
   top: 50%;
   background-color: transparent;
   border: transparent; }
