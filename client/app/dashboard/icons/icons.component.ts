@@ -28,7 +28,7 @@ export class IconsComponent implements OnInit{
         this.changeBackgroundImages(++this.counter);
     }
    changeBackgroundImages(imgId){
-       this.divRef = document.getElementById("menuImg");
-        this.divRef.style.backgroundImage = "url("+this.menuItems[imgId]+")";
+       this.divRef = document.getElementById("menuImg").children[0]
+        this.divRef.src = this.menuItems[imgId];
    }
 }

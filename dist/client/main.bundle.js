@@ -484,8 +484,8 @@ var IconsComponent = (function () {
         this.changeBackgroundImages(++this.counter);
     };
     IconsComponent.prototype.changeBackgroundImages = function (imgId) {
-        this.divRef = document.getElementById("menuImg");
-        this.divRef.style.backgroundImage = "url(" + this.menuItems[imgId] + ")";
+        this.divRef = document.getElementById("menuImg").children[0];
+        this.divRef.src = this.menuItems[imgId];
     };
     IconsComponent = __decorate([
         core_1.Component({
@@ -1101,7 +1101,7 @@ module.exports = "<div class=\"main-content\">\r\n\r\n    <div class=\"container
 /***/ 573:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\" id=\"menuImg\">\n                <button class=\"menubtn\" type=\"button\" [disabled]=\"(counter <= 0)\" (click)=\"handleLeftClick()\"><i class=\"material-icons leftarrow\">keyboard_arrow_left</i></button> \n                <button class=\"pull-right menubtn\" type=\"button\" [disabled]=\"(counter >= (menuItems.length-1))\" (click)=\"handleRightClick()\"><i class=\"material-icons rightarrow\">keyboard_arrow_right</i></button>                \n            </div>\n        </div>\n    </div>\n</div>\n    "
+module.exports = "<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\" id=\"menuImg\">\n                <img/>\n                <div class=\"btncontainer\">\n                    <button class=\"menubtn\" type=\"button\" [disabled]=\"(counter <= 0)\" (click)=\"handleLeftClick()\"><i class=\"material-icons leftarrow\">keyboard_arrow_left</i></button>\n                    <button class=\"pull-right menubtn\" type=\"button\" [disabled]=\"(counter >= (menuItems.length-1))\" (click)=\"handleRightClick()\"\n                        style=\"right:0%\"><i class=\"material-icons rightarrow\">keyboard_arrow_right</i></button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
