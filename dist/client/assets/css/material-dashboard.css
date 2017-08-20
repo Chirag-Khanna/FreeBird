@@ -588,6 +588,22 @@ h2.title {
   display: flex !important;
   justify-content: center; }
 
+.menubtn {
+  position: relative;
+  top: 50%;
+  background-color: transparent;
+  border: transparent; }
+  .menubtn i {
+    font-size: 96px;
+    font-weight: bold;
+    color: whitesmoke; }
+
+.menubtn:disabled i {
+  opacity: 0.5; }
+
+#menuImg {
+  height: 768px; }
+
 .carouselHeight {
   height: 450px; }
 

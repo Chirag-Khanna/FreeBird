@@ -25,8 +25,8 @@ module.exports = function () {
       from: 'cafefreebird@gmail.com', // sender address
       to: bookingDetail.email, // list of receivers
       bcc: 'cafefreebird@gmail.com',
-      subject: 'Booking Confirmed', // Subject line
-      text: 'Booking for customer: '+bookingDetail.name+' for '+bookingDetail.guest+' guests at Free BirdCafe - '+bookingDetail.area+ ' has been confirmed . \nWe will contact you at: '+ bookingDetail.mob + 'in case of any query. \nFor any furter details contact Himanshu Verma - 9871900222 or mail us at cafefreebird@gmail.com \nRegards\nTeam Cafe FreeBird', // plain text body
+      subject: 'Booking Confirmed - Cafe FreeBird', // Subject line
+      text: 'Booking for customer: '+bookingDetail.name+' for '+bookingDetail.guest+' guests at Cafe FreeBird - '+bookingDetail.area+ ' has been confirmed . \nWe will contact you at: '+ bookingDetail.mob + ' in case of any updates. \nFor any furter details contact us at - 9871900222 or mail us at cafefreebird@gmail.com \nRegards\nTeam Cafe FreeBird', // plain text body
       // html: '<b>Hello world ?</b>' // html body
     };
 
