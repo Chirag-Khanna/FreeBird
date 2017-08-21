@@ -292,9 +292,9 @@ module.exports = {
       jquery: 'jquery',
       'window.jQuery': 'jquery'
     }),
-    // new UglifyJSPlugin({
-    //   compress: true
-    // })
+    new UglifyJSPlugin({
+      compress: true
+    })
 
   ],
   "node": {
