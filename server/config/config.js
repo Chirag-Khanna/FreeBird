@@ -28,6 +28,7 @@ const config = {
         db: {
             url: 'ds131583.mlab.com:31583/freebird_content',
             dbOptions: {
+                useMongoClient: true,
                 db: {
                     native_parser: true
                 },
@@ -48,6 +49,7 @@ const config = {
         db: {
             url: 'ds131583.mlab.com:31583/freebird_content',
             dbOptions: {
+                useMongoClient: true,
                 db: {
                     native_parser: true
                 },
@@ -68,6 +70,7 @@ const config = {
         db: {
             url: 'ds131583.mlab.com:31583/freebird_content',
             dbOptions: {
+                useMongoClient: true,
                 db: {
                     native_parser: true
                 },
