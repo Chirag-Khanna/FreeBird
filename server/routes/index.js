@@ -16,7 +16,7 @@ module.exports = function () {
       secure: true, // secure:true for port 465, secure:false for port 587
       auth: {
         user: 'cafefreebird@gmail.com',
-        pass: 'chirag@1234546'
+        pass: 'chirag@123'
       }
     });
 
@@ -33,6 +33,7 @@ module.exports = function () {
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
+        console.log(error);
         res.send(error);
         return;
       }
