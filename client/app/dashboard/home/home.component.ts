@@ -20,10 +20,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
     ];
     events = [
         {
+            title: "Test ride Dsk Benelli - 28 October 2017 ownwards",
+            description: "Book your Test Ride for Dsk Benelli Models TNT 302R in display at Cafe Free Bird. Enjoy the ride and some amazing food with the most lively environment, at Cafe Free Bird",
+            date: "28/10/2017 ownwards"
+        },
+        {
             title: "Giving is Good!! - 29 October 2017 (06:30 AM ownwards)",
             description: "CAFE FREE BIRD, Guragon Faridabad Road welcomes  “Bikerz of India” for their ride with “Sh. Omkar Nath Sharma” aka “Medicine Baba”. All biker groups are invited in the event. Enjoy refreshments and have lots of fun at Cafe Free Bird. ",
             date: "29/10/2017"
         }
+        
     ];
     websiteDataConfig: any;
     constructor(private dataservice: DataService) {
