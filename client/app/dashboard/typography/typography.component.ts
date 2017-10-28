@@ -11,9 +11,9 @@ declare var $;
 
 export class TypographyComponent implements OnInit {
     bookingOptions = [
-        { path: "../../../assets/img/terrace.jpg", caption: "Terrace Cafe" },
-        { path: "../../../assets/img/funkyYard.jpg", caption: "FunkyYard" },
-        { path: "../../../assets/img/relaxArea.jpg", caption: "Relaxing Area" },
+        { path: "../../../assets/img/terrace.jpg", caption: "Terrace Seating" },
+        { path: "../../../assets/img/funkyYard.jpg", caption: "Bamboo Seating" },
+        { path: "../../../assets/img/relaxArea.jpg", caption: "Inndoor-AC Seating" },
         { path: "../../../assets/img/amphitheater.jpg", caption: "Amphi-Theater" }
     ]
     bookingDetail:any;

@@ -4,14 +4,6 @@
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
                 <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                    </ol>
-
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item carouselItem active">
@@ -75,11 +67,8 @@
                             <tbody>
                                 <tr *ngFor="let item of items">
                                     <td>
-                                        <label>{{item.head}}:</label>
-                                    </td>
-                                    <td>
-                                        <p>{{item.subject}} <a href="https://goeventz.com/event/be-a-lemonade-member/52356">Registration Link</a> </p>
-                                    </td>
+                                        <label>{{item.head}}:</label>  <p>{{item.subject}}<br/> <a href="https://www.facebook.com/events/132076877440830/?acontext=%7B%22source%22%3A3%2C%22source_newsfeed_story_type%22%3A%22regular%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22newsfeed%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22feed_story%5C%22%2C%5C%22extra_data%5C%22%3A[]%7D]%22%2C%22has_source%22%3Atrue%7D&source=3&source_newsfeed_story_type=regular&action_history=[%7B%22surface%22%3A%22newsfeed%22%2C%22mechanism%22%3A%22feed_story%22%2C%22extra_data%22%3A[]%7D]&has_source=1&hc_ref=ARSlkp1hLqcVpD7TNGlcs73CLr7TfDufJv5EyKNGbPppipWhEezFO4dGlp6H4jR3RbE">Registration Link</a> </p>
+                                    </td>                                    
                                 </tr>
                             </tbody>
                         </table>

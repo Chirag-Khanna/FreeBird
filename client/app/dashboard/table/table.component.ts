@@ -9,9 +9,9 @@ declare var $;
 
 export class TableComponent implements OnInit {
     CafImgs = [
-        ['../../../assets/img/event1.jpg', '../../../assets/img/event3.jpg'],
-        ['../../../assets/img/event4.jpg','../../../assets/img/event5.jpg'],
-        ['../../../assets/img/event6.jpg','../../../assets/img/event7.jpg'],
+        ['../../../assets/img/event1.jpg', '../../../assets/img/event5.jpg'],
+        ['../../../assets/img/event4.jpg','../../../assets/img/event6.jpg'],
+        ['../../../assets/img/event3.jpg','../../../assets/img/event7.jpg'],
         ['../../../assets/img/event8.jpg','../../../assets/img/event9.jpg']
     ];
     prodImgs = [

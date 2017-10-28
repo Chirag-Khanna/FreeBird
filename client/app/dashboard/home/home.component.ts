@@ -10,8 +10,8 @@ declare var $;
 
 export class HomeComponent implements OnInit, AfterViewInit {
     items = [{
-        head: "Be Lemonade Member",
-        subject: "Become our member to get free lemonade every saturday and sunday from 6:30am onwards."
+        head: "Giving is Good!!",
+        subject: "Cafe FreBird welcomes “Bikerz of India” for their ride with “Sh. Omkar Nath Sharma” aka “Medicine Baba” on 29th of October, 2017. Experience the Joy of Giving!!"
     }
     ];
     cafeServices = ["We are a bunch of bicycle lovers who would like to share our experience with other companions. We have a pretty decent collection of armours for people like us.",
@@ -20,14 +20,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
     ];
     events = [
         {
-            title: "Crazy Motorbikers Breakfast - 10 September 2017 (06:30 AM ownwards)",
-            description: "CAFE FREE BIRD, Guragon Faridabad Road brings an amazing breakfast buffet exclusively for all motorbikers. ",
-            date: "10/09/2017"
-        },
-        {
-            title: "DJ Evening - (8 September - 10 September)",
-            description: "Cafe Free Bird brings you grooving DJ Evenings (Bollywood/Sufi/Rock)",
-            date: "8/09/2017 - 10/09/2017"
+            title: "Giving is Good!! - 29 October 2017 (06:30 AM ownwards)",
+            description: "CAFE FREE BIRD, Guragon Faridabad Road welcomes  “Bikerz of India” for their ride with “Sh. Omkar Nath Sharma” aka “Medicine Baba”. All biker groups are invited in the event. Enjoy refreshments and have lots of fun at Cafe Free Bird. ",
+            date: "29/10/2017"
         }
     ];
     websiteDataConfig: any;
